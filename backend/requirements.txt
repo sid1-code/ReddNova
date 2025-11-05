@@ -1,0 +1,12 @@
+praw
+spacy
+transformers
+fastapi
+uvicorn
+pandas
+torch
+regex
+
+# After installing requirements, download the spaCy English model:
+# python -m spacy download en_core_web_sm
+
