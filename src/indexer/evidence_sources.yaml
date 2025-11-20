@@ -1,0 +1,65 @@
+# Evidence whitelist for Live Fake News — Gaming Domain
+# These sources will be crawled for authoritative evidence.
+
+gaming_sources:
+  - name: IGN
+    url: "https://www.ign.com"
+    rss: "https://feeds.feedburner.com/ign/all"
+
+  - name: PCGamer
+    url: "https://www.pcgamer.com"
+    rss: "https://www.pcgamer.com/rss/"
+
+  - name: Polygon
+    url: "https://www.polygon.com"
+    rss: "https://www.polygon.com/rss/index.xml"
+
+  - name: GameSpot
+    url: "https://www.gamespot.com"
+    rss: "https://www.gamespot.com/feeds/mashup/"
+
+  - name: Eurogamer
+    url: "https://www.eurogamer.net"
+    rss: "https://www.eurogamer.net/feed/news"
+
+  - name: Steam News
+    url: "https://store.steampowered.com/news"
+    rss: "https://store.steampowered.com/feeds/news.xml"
+
+  - name: PlayStation Blog
+    url: "https://blog.playstation.com"
+    rss: "https://blog.playstation.com/feed/"
+
+  - name: Xbox Official News
+    url: "https://news.xbox.com/en-us/"
+    rss: "https://news.xbox.com/en-us/feed/"
+
+  - name: Ubisoft News
+    url: "https://www.ubisoft.com/en-us/news"
+    rss: ""
+
+  - name: EA News
+    url: "https://www.ea.com/news"
+    rss: ""
+
+fact_check_sources:
+  - name: Reuters Fact Check
+    url: "https://www.reuters.com/fact-check/"
+    rss: ""
+
+  - name: AP Fact Check
+    url: "https://apnews.com/hub/ap-fact-check"
+    rss: ""
+
+  - name: Snopes
+    url: "https://www.snopes.com"
+    rss: "https://www.snopes.com/feed/"
+
+general_news_sources:
+  - name: BBC Technology
+    url: "https://www.bbc.com/news/technology"
+    rss: "http://feeds.bbci.co.uk/news/technology/rss.xml"
+
+  - name: The Verge
+    url: "https://www.theverge.com"
+    rss: "https://www.theverge.com/rss/index.xml"

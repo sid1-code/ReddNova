@@ -1,1 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
 .env
+.venv/
+venv/
+env/
+.venv/
+
+# data
+data/
+logs/
+*.sqlite3
+
+# virtual env / IDE
+.vscode/
+.idea/
+.DS_Store
+
+# model artifacts
+models/
+outputs/
+.checkpoints/
+
+# OS files
+Thumbs.db
