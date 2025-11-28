@@ -1,0 +1,226 @@
+:root{
+  --bg:#f6f7f8;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#0079d3; /* Reddit-blue-ish */
+  --accent-2:#ff4500; /* reddit orange for small accents */
+  --success:#2ea44f;
+  --danger:#cf222e;
+  --shadow: 0 6px 18px rgba(15,23,42,0.06);
+  --radius:12px;
+  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Base layout */
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-size:14px;
+}
+
+/* Topbar */
+.topbar{
+  background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.8));
+  border-bottom:1px solid rgba(15,23,42,0.04);
+  padding:14px 20px;
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.logo{
+  background:var(--accent);
+  color:#fff;
+  font-weight:700;
+  border-radius:6px;
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  box-shadow: var(--shadow);
+}
+.brand-texts .brand-title{
+  font-weight:600;
+  font-size:16px;
+}
+.brand-texts .brand-sub{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:2px;
+}
+
+/* Main grid */
+.main-grid{
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap:24px;
+  max-width:1100px;
+  margin:20px auto;
+  padding:0 18px;
+  align-items:start;
+}
+
+/* Post column */
+.post-column{ }
+.post-card{
+  display:flex;
+  gap:18px;
+  background:var(--card);
+  padding:18px;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  align-items:flex-start;
+}
+.vote-col{
+  width:64px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+}
+.vote{
+  border:1px solid rgba(15,23,42,0.06);
+  background:transparent;
+  padding:6px 8px;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:14px;
+}
+.score{ font-weight:600; color:var(--muted) }
+
+.post-content{ flex:1 }
+.post-meta{ color:var(--muted); font-size:13px; margin-bottom:8px }
+.subreddit{ font-weight:600; color:var(--accent) }
+.post-title{ margin:6px 0 12px 0; font-size:20px; line-height:1.1 }
+.post-hero img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+  margin-bottom:12px;
+  background:linear-gradient(90deg,#e6eef9,#f6f8fb);
+}
+.post-text{ color:#111827; margin-bottom:14px }
+
+/* Analysis block */
+.analysis-block{
+  margin-top:12px;
+  background: #f8fafc;
+  padding:14px;
+  border-radius:10px;
+}
+.analysis-header{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-bottom:12px;
+}
+.verdict{
+  padding:6px 12px;
+  border-radius:20px;
+  font-weight:700;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:0.6px;
+}
+.verdict.true{ background:rgba(46,164,79,0.12); color:var(--success); border:1px solid rgba(46,164,79,0.12) }
+.verdict.fake{ background:rgba(207,34,46,0.08); color:var(--danger); border:1px solid rgba(207,34,46,0.06) }
+.verdict.uncertain{ background:rgba(255,165,0,0.08); color:#b45309; border:1px solid rgba(255,165,0,0.06) }
+.verdict.neutral{ background:rgba(99,102,241,0.06); color:#374151; border:1px solid rgba(15,23,42,0.04) }
+
+.confidence{ color:var(--muted); font-size:13px }
+
+/* Evidence list */
+.evidence-clean{ margin-top:8px; }
+.evidence-item{ margin:6px 0; color:#0f172a }
+.evidence-item.manual{ color:#374151; font-style:italic }
+
+/* Sources */
+.sources-clean{ margin-top:12px; font-size:13px }
+.sources-clean ul{ margin:8px 0 0 18px }
+
+/* Control column */
+.control-column{ position:relative; }
+.control-card{
+  background:var(--card);
+  padding:16px;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  position:sticky;
+  top:26px;
+}
+.label{ display:block; margin-bottom:8px; color:var(--muted); font-weight:600 }
+.claim-input{
+  width:100%;
+  min-height:120px;
+  border-radius:8px;
+  border:1px solid rgba(15,23,42,0.06);
+  padding:10px;
+  font-size:14px;
+  resize:vertical;
+  margin-bottom:12px;
+  font-family:inherit;
+}
+.controls{ display:flex; gap:8px; margin-bottom:8px }
+.btn{
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid rgba(15,23,42,0.06);
+  background:transparent;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn.primary{
+  background:var(--accent);
+  color:#fff;
+  border:1px solid rgba(0,0,0,0.06);
+}
+.btn:disabled{ opacity:0.6; cursor:not-allowed; }
+
+/* Footer card */
+.footer-card{
+  margin-top:14px;
+  padding:12px;
+  text-align:center;
+  background:transparent;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* Error & help text */
+.error{ color:var(--danger); margin-top:6px; font-weight:600 }
+.help{ color:var(--muted); margin-top:8px; font-size:13px }
+
+/* Skeleton shimmer */
+.skeleton{
+  display:block;
+  background:linear-gradient(90deg, rgba(255,255,255,0.5), rgba(0,0,0,0.04) 40%, rgba(255,255,255,0.5));
+  background-size:200% 100%;
+  animation: shimmer 1.2s linear infinite;
+  border-radius:6px;
+  height:12px;
+}
+@keyframes shimmer {
+  0%{ background-position:200% 0 }
+  100%{ background-position:-200% 0 }
+}
+
+/* Responsive */
+@media (max-width:980px){
+  .main-grid{ grid-template-columns: 1fr; padding:0 12px; }
+  .control-column{ order:2 }
+  .post-column{ order:1 }
+  .post-hero img{ height:180px }
+}
